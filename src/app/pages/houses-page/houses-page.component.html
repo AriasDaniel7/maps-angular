@@ -8,7 +8,7 @@
 <section class="px-4 md:px-20 flex flex-wrap gap-6 justify-center items-center">
   @for (house of houses(); track house.id; let i = $index) {
   <!-- Card -->
-  <div class="card bg-base-100 shadow-md rounded-t-md overflow-hidden">
+  <div class="card w-96 bg-base-100 shadow-md rounded-t-md overflow-hidden">
     <app-mini-map [zoom]="16.5" [coordinates]="house.lngLat"></app-mini-map>
     <div class="card-body">
       <h2 class="card-title">
