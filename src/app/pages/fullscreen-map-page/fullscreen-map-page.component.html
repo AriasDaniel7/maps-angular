@@ -10,11 +10,19 @@
 
   <input
     type="range"
-    min="1"
+    min="4"
     max="19"
     [value]="zoom()"
     class="range range-secondary"
     (input)="zoom.set(+txtZoom.value)"
     #txtZoom
   />
+
+  <h2 class="text-2xl font-bold text-black mb-2">Coordenadas</h2>
+  <pre class="font-normal text-sm text-gray-500">{{
+    {
+      latitude: coordinates().lat | number : "1.4-4",
+      longitude: coordinates().lng | number : "1.4-4"
+    } | json
+  }}</pre>
 </section>
